@@ -18,6 +18,7 @@
 	"author": "Lukas Hartmann",
 	"license": "ISC",
 	"scripts": {
+		"dev": "concurrently -n cms,db 'pnpm --filter=dev dev' 'pnpm --filter=dev db'",
 		"build": "tsc",
 		"test": "jest",
 		"prepublishOnly": "pnpm build"
